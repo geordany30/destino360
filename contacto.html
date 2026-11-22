@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contacta a Destino360: formulario, teléfono, correo y redes sociales.">
+    <title>Contacto | Destino360</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="Destino360, ir al inicio"><i class="fas fa-earth-americas"></i> DESTINO360</a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><i class="fas fa-bars"></i></button>
+        <nav class="main-nav" id="menu-principal" aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="destinos.html">DESTINOS</a></li>
+                <li><a href="servicios.html">SERVICIOS</a></li>
+                <li><a href="detalle.html">DETALLE DEL DESTINO</a></li>
+                <li><a href="reservas.html">RESERVAS</a></li>
+                <li><a href="contacto.html" class="active" aria-current="page">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido">
+        <section class="hero hero--short hero-contacto">
+            <div class="hero-content">
+                <h1>Contáctanos</h1>
+                <p>Estamos aquí para ayudarte. Si tienes alguna duda, comentario o necesitas asistencia, no dudes en escribirnos.</p>
+                <a href="#formulario" class="btn-primary">ESCRÍBENOS <i class="fas fa-arrow-down"></i></a>
+            </div>
+        </section>
+
+        <div class="contacto-layout">
+            <div class="contacto-main">
+                <section id="encuentranos" aria-labelledby="titulo-encuentranos">
+                    <h2 id="titulo-encuentranos">Encuéntranos</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Estamos disponibles 24/7, ven y te ayudamos a programar tus viajes.</p>
+                    <iframe class="map-frame" title="Mapa: Calle 123 #45-67, Bogotá" src="https://maps.google.com/maps?q=Bogot%C3%A1%2C%20Colombia&amp;z=12&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                    <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Bogot%C3%A1%2C%20Colombia" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-location-dot"></i> Abrir en Google Maps</a>
+                </section>
+
+                <section id="formulario" aria-labelledby="titulo-formulario">
+                    <h2 id="titulo-formulario">Solicita tu viaje</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 20px;">Cuéntanos a dónde quieres ir y te enviamos una propuesta.</p>
+                    <form id="form-contacto" novalidate>
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label for="f-nombre">Nombre completo *</label>
+                                <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+                                <span class="error-msg" aria-live="polite"></span>
+                            </div>
+                            <div class="form-field">
+                                <label for="f-correo">Correo electrónico *</label>
+                                <input id="f-correo" name="correo" type="email" autocomplete="email" required>
+                                <span class="error-msg" aria-live="polite"></span>
+                            </div>
+                            <div class="form-field">
+                                <label for="f-telefono">Teléfono</label>
+                                <input id="f-telefono" name="telefono" type="tel" autocomplete="tel">
+                                <span class="error-msg" aria-live="polite"></span>
+                            </div>
+                            <div class="form-field">
+                                <label for="f-fecha">Fecha estimada de viaje</label>
+                                <input id="f-fecha" name="fecha" type="date">
+                                <span class="error-msg"></span>
+                            </div>
+                            <div class="form-field">
+                                <label for="f-destino">Destino de interés</label>
+                                <select id="f-destino" name="destino">
+                                    <option value="">Selecciona un destino</option>
+                                </select>
+                                <span class="error-msg"></span>
+                            </div>
+                            <div class="form-field">
+                                <label for="f-servicio">Servicio</label>
+                                <select id="f-servicio" name="servicio">
+                                    <option value="">Selecciona un servicio</option>
+                                    <option value="alojamiento">Alojamiento</option>
+                                    <option value="transporte">Transporte</option>
+                                    <option value="tours">Tours y actividades</option>
+                                    <option value="asistencia">Asistencia al viajero</option>
+                                    <option value="paquete">Paquete completo</option>
+                                </select>
+                                <span class="error-msg"></span>
+                            </div>
+                            <div class="form-field form-field--full">
+                                <label for="f-mensaje">Mensaje *</label>
+                                <textarea id="f-mensaje" name="mensaje" required></textarea>
+                                <span class="error-msg" aria-live="polite"></span>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-secondary">ENVIAR SOLICITUD <i class="fas fa-paper-plane"></i></button>
+                            <small style="color: var(--text-muted);">* Campos obligatorios</small>
+                        </div>
+                        <div class="form-success" id="form-exito" role="status" tabindex="-1"></div>
+                    </form>
+                </section>
+            </div>
+
+            <aside class="contacto-aside">
+                <div class="box">
+                    <h3>Información de contacto</h3>
+                    <div class="contact-item">
+                        <img src="assets/img/iconos/ubicacion.png" alt="" class="custom-icon">
+                        <div><strong>Destinos únicos</strong><br><a href="#encuentranos">Calle 123 #45-67<br>Bogotá, Colombia</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="assets/img/iconos/telefono.png" alt="" class="custom-icon">
+                        <div><strong>Teléfono</strong><br><a href="tel:+576012345678">+57 601 234 5678</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="assets/img/iconos/correo.png" alt="" class="custom-icon">
+                        <div><strong>Correo electrónico</strong><br><a href="mailto:info@destino360.com">info@destino360.com</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="assets/img/iconos/reloj.png" alt="" class="custom-icon">
+                        <div><strong>Horarios de atención</strong><br><span>Lunes a viernes: 8:00 a.m. - 6:00 p.m.<br>Sábados y domingos: 9:00 a.m. - 1:00 p.m.</span></div>
+                    </div>
+                </div>
+
+                <div class="box social-box">
+                    <h3>Síguenos en nuestras redes</h3>
+                    <div class="social-row">
+                        <a href="https://www.instagram.com/websitep634/" target="_blank" rel="noopener noreferrer"><img src="assets/img/iconos/instagram.png" alt="" class="social-icon-img">Instagram</a>
+                        <a href="https://web.facebook.com/profile.php?id=61596557891798" target="_blank" rel="noopener noreferrer"><img src="assets/img/iconos/facebook.png" alt="" class="social-icon-img">Facebook</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <h4>DESTINO360</h4>
+                <p>Explora. Viaja. Vive.</p>
+            </div>
+            <div class="footer-info">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="reservas.html">Reservar alojamiento</a></li>
+                    <li><a href="reservas.html#mis-reservas">Mis reservas</a></li>
+                    <li><a href="contacto.html#formulario">Solicitar cotización</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="mailto:info@destino360.com"><i class="fas fa-envelope"></i> info@destino360.com</a></li>
+                    <li><a href="tel:+576012345678"><i class="fas fa-phone"></i> +57 601 234 5678</a></li>
+                    <li><a href="contacto.html#encuentranos"><i class="fas fa-location-dot"></i> Bogotá, Colombia</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/profile.php?id=61596557891798" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Destino360 (abre en una pestaña nueva)"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/websitep634/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Destino360 (abre en una pestaña nueva)"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; <span class="year">2026</span> Destino360. Todos los derechos reservados.</p>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+    <script src="assets/js/destinos.js"></script>
+    <script src="assets/js/reservas.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

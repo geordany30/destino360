@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Conoce el destino, sus imperdibles y reserva tu viaje.">
+    <title>Detalle | Destino360</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="Destino360, ir al inicio"><i class="fas fa-earth-americas"></i> DESTINO360</a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><i class="fas fa-bars"></i></button>
+        <nav class="main-nav" id="menu-principal" aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="destinos.html">DESTINOS</a></li>
+                <li><a href="servicios.html">SERVICIOS</a></li>
+                <li><a href="detalle.html" class="active" aria-current="page">DETALLE DEL DESTINO</a></li>
+                <li><a href="reservas.html">RESERVAS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido">
+        <div class="detalle-wrap" id="detalle-destino">
+            <nav class="breadcrumb" aria-label="Ruta de navegación">
+                <a href="index.html">Inicio</a> / <a href="destinos.html">Destinos</a> / <span id="d-breadcrumb">Cartagena</span>
+            </nav>
+            <h1 id="d-titulo">Descubre la magia de la Ciudad Amurallada de Cartagena.</h1>
+
+            <section class="detalle-intro">
+                <div class="detalle-text">
+                    <p id="d-descripcion">La Ciudad Vieja se fundó en el siglo XVI, con plazas, calles de adoquines y edificios coloniales coloridos. Con un clima tropical, la ciudad también es un destino popular por sus playas.</p>
+                    <div class="detalle-meta">
+                        <span><i class="fas fa-flag"></i><span id="d-pais">Colombia</span></span>
+                        <span><i class="fas fa-temperature-half"></i><span id="d-clima">Tropical, 28 °C promedio</span></span>
+                        <span><i class="fas fa-calendar-days"></i><span id="d-temporada">Diciembre a abril</span></span>
+                    </div>
+                    <p class="detalle-price" id="d-precio" data-precio-id="cartagena"></p>
+                    <div class="btn-row">
+                        <a href="#reservar" id="d-reservar" class="btn-secondary">RESERVAR <i class="fas fa-check"></i></a>
+                        <a href="#imperdibles" class="btn-secondary">EXPLORAR <i class="fas fa-binoculars"></i></a>
+                    </div>
+                </div>
+                <div class="detalle-img">
+                    <img id="d-imagen" src="assets/img/destinos/cartagena.jpg" alt="Calle de Cartagena">
+                </div>
+            </section>
+
+            <section id="reservar" class="detalle-booking" aria-labelledby="titulo-reservar">
+                <h2 class="section-title section-title--left" id="titulo-reservar"><i class="fas fa-calendar-days"></i> ELIGE TUS FECHAS</h2>
+                <form class="booking-search detalle" action="reservas.html" method="get" data-destino="cartagena">
+                <div class="bs-field bs-destino">
+                    <label for="bs-destinodetalle"><i class="fas fa-location-dot"></i> Destino</label>
+                    <select id="bs-destinodetalle" name="destino" required><option value="">¿A dónde vas?</option></select>
+                </div>
+                <div class="bs-field">
+                    <label for="bs-entradadetalle"><i class="fas fa-calendar-days"></i> Entrada</label>
+                    <input id="bs-entradadetalle" type="date" name="entrada" required>
+                </div>
+                <div class="bs-field">
+                    <label for="bs-salidadetalle"><i class="fas fa-calendar-check"></i> Salida <span class="booking-nights"></span></label>
+                    <input id="bs-salidadetalle" type="date" name="salida" required>
+                </div>
+                <div class="bs-field bs-small">
+                    <label for="bs-adultosdetalle"><i class="fas fa-user"></i> Adultos</label>
+                    <select id="bs-adultosdetalle" name="adultos"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
+                </div>
+                <div class="bs-field bs-small">
+                    <label for="bs-ninosdetalle"><i class="fas fa-child"></i> Niños</label>
+                    <select id="bs-ninosdetalle" name="ninos"><option value="0" selected>0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+                </div>
+                <div class="bs-field bs-small">
+                    <label for="bs-habdetalle"><i class="fas fa-door-open"></i> Habit.</label>
+                    <select id="bs-habdetalle" name="habitaciones"><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>
+                </div>
+                <button type="submit" class="btn-primary bs-submit"><i class="fas fa-magnifying-glass"></i> Buscar</button>
+                <p class="booking-error" role="alert" hidden></p>
+            </form>
+            </section>
+
+            <section id="galeria" aria-label="Galería">
+                <div class="galeria" id="d-galeria">
+                    <figure><img src="assets/img/detalle/playas.jpg" alt="Playas" loading="lazy"><figcaption><strong>PLAYAS</strong><span><i class="fas fa-map-marker-alt"></i> alrededor de la ciudad</span></figcaption></figure>
+                    <figure><img src="assets/img/detalle/gastronomia.jpg" alt="Gastronomía" loading="lazy"><figcaption><strong>GASTRONOMÍA</strong><span><i class="fas fa-map-marker-alt"></i> gastronomía y tradición</span></figcaption></figure>
+                    <figure><img src="assets/img/detalle/islas-del-rosario.jpg" alt="Islas del Rosario" loading="lazy"><figcaption><strong>ISLAS DEL ROSARIO</strong><span><i class="fas fa-map-marker-alt"></i> a 45 minutos en lancha</span></figcaption></figure>
+                </div>
+            </section>
+
+            <section id="imperdibles" aria-labelledby="titulo-imperdibles">
+                <h2 class="section-title section-title--left" id="titulo-imperdibles">IMPERDIBLES</h2>
+                <div class="imperdibles" id="d-imperdibles">
+                    <div class="imperdible"><i class="fas fa-chess-rook"></i><h3>Castillo San Felipe</h3><p>La fortaleza española más grande de América.</p></div>
+                    <div class="imperdible"><i class="fas fa-person-walking"></i><h3>Getsemaní</h3><p>Murales, música y vida de barrio.</p></div>
+                    <div class="imperdible"><i class="fas fa-sun"></i><h3>Atardecer en la muralla</h3><p>El mejor plan al caer la tarde.</p></div>
+                </div>
+            </section>
+
+            <section class="otros-destinos" aria-labelledby="titulo-otros">
+                <h2 class="section-title section-title--left" id="titulo-otros">OTROS DESTINOS QUE TE PUEDEN GUSTAR</h2>
+                <div class="grid-container" id="d-otros"></div>
+                <p><a href="destinos.html" class="btn-secondary">VER TODOS LOS DESTINOS <i class="fas fa-arrow-right"></i></a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <h4>DESTINO360</h4>
+                <p>Explora. Viaja. Vive.</p>
+            </div>
+            <div class="footer-info">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="reservas.html">Reservar alojamiento</a></li>
+                    <li><a href="reservas.html#mis-reservas">Mis reservas</a></li>
+                    <li><a href="contacto.html#formulario">Solicitar cotización</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="mailto:info@destino360.com"><i class="fas fa-envelope"></i> info@destino360.com</a></li>
+                    <li><a href="tel:+576012345678"><i class="fas fa-phone"></i> +57 601 234 5678</a></li>
+                    <li><a href="contacto.html#encuentranos"><i class="fas fa-location-dot"></i> Bogotá, Colombia</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/profile.php?id=61596557891798" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Destino360 (abre en una pestaña nueva)"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/websitep634/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Destino360 (abre en una pestaña nueva)"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; <span class="year">2026</span> Destino360. Todos los derechos reservados.</p>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+    <script src="assets/js/destinos.js"></script>
+    <script src="assets/js/reservas.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

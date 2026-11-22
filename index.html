@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Destino360: agencia de viajes. Descubre destinos increíbles, servicios de alojamiento, transporte y tours.">
+    <title>Destino360 | Inicio</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="Destino360, ir al inicio"><i class="fas fa-earth-americas"></i> DESTINO360</a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><i class="fas fa-bars"></i></button>
+        <nav class="main-nav" id="menu-principal" aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">INICIO</a></li>
+                <li><a href="destinos.html">DESTINOS</a></li>
+                <li><a href="servicios.html">SERVICIOS</a></li>
+                <li><a href="detalle.html">DETALLE DEL DESTINO</a></li>
+                <li><a href="reservas.html">RESERVAS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido">
+        <section class="hero hero-home">
+            <div class="hero-content">
+                <p class="eyebrow">TU PRÓXIMA AVENTURA EMPIEZA AQUÍ</p>
+                <h1>EXPERIENCIAS QUE INSPIRAN</h1>
+                <p>Descubre destinos increíbles, vive nuestras culturas y crea recuerdos que duran para siempre.</p>
+                <div class="btn-row">
+                    <a href="destinos.html" class="btn-primary">EXPLORAR DESTINOS <i class="fas fa-arrow-right"></i></a>
+                    <a href="#ofertas" class="btn-secondary">VER OFERTAS <i class="fas fa-tags"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <div class="booking-wrap">
+            <form class="booking-search home" action="reservas.html" method="get">
+                <div class="bs-field bs-destino">
+                    <label for="bs-destinohome"><i class="fas fa-location-dot"></i> Destino</label>
+                    <select id="bs-destinohome" name="destino" required><option value="">¿A dónde vas?</option></select>
+                </div>
+                <div class="bs-field">
+                    <label for="bs-entradahome"><i class="fas fa-calendar-days"></i> Entrada</label>
+                    <input id="bs-entradahome" type="date" name="entrada" required>
+                </div>
+                <div class="bs-field">
+                    <label for="bs-salidahome"><i class="fas fa-calendar-check"></i> Salida <span class="booking-nights"></span></label>
+                    <input id="bs-salidahome" type="date" name="salida" required>
+                </div>
+                <div class="bs-field bs-small">
+                    <label for="bs-adultoshome"><i class="fas fa-user"></i> Adultos</label>
+                    <select id="bs-adultoshome" name="adultos"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
+                </div>
+                <div class="bs-field bs-small">
+                    <label for="bs-ninoshome"><i class="fas fa-child"></i> Niños</label>
+                    <select id="bs-ninoshome" name="ninos"><option value="0" selected>0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+                </div>
+                <div class="bs-field bs-small">
+                    <label for="bs-habhome"><i class="fas fa-door-open"></i> Habit.</label>
+                    <select id="bs-habhome" name="habitaciones"><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>
+                </div>
+                <button type="submit" class="btn-primary bs-submit"><i class="fas fa-magnifying-glass"></i> Buscar</button>
+                <p class="booking-error" role="alert" hidden></p>
+            </form>
+        </div>
+
+        <section id="destacados" aria-labelledby="titulo-destacados">
+            <h2 class="section-title" id="titulo-destacados">DESTINOS DESTACADOS</h2>
+            <div class="grid-container">
+                <article class="card-destino" data-id="cartagena" data-category="ciudades" data-name="Cartagena Colombia">
+                    <div class="card-img">
+                        <img src="assets/img/destinos/cartagena.jpg" alt="Cartagena, Colombia" loading="lazy">
+                        <span class="card-tag">ciudades</span>
+                        <span class="deal-badge" data-oferta-id="cartagena" hidden></span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Cartagena</h3>
+                        <p>Colombia</p>
+                        <p class="card-price" data-precio-id="cartagena"></p>
+                        <a class="card-link" href="detalle.html?destino=cartagena">Ver destino <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="card-destino" data-id="madrid" data-category="ciudades" data-name="Madrid España">
+                    <div class="card-img">
+                        <img src="assets/img/destinos/madrid.jpg" alt="Madrid, España" loading="lazy">
+                        <span class="card-tag">ciudades</span>
+                        <span class="deal-badge" data-oferta-id="madrid" hidden></span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Madrid</h3>
+                        <p>España</p>
+                        <p class="card-price" data-precio-id="madrid"></p>
+                        <a class="card-link" href="detalle.html?destino=madrid">Ver destino <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="card-destino" data-id="cancun" data-category="playas" data-name="Cancún México">
+                    <div class="card-img">
+                        <img src="assets/img/destinos/cancun.jpg" alt="Cancún, México" loading="lazy">
+                        <span class="card-tag">playas</span>
+                        <span class="deal-badge" data-oferta-id="cancun" hidden></span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Cancún</h3>
+                        <p>México</p>
+                        <p class="card-price" data-precio-id="cancun"></p>
+                        <a class="card-link" href="detalle.html?destino=cancun">Ver destino <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="card-destino" data-id="roma" data-category="ciudades" data-name="Roma Italia">
+                    <div class="card-img">
+                        <img src="assets/img/destinos/roma.jpg" alt="Roma, Italia" loading="lazy">
+                        <span class="card-tag">ciudades</span>
+                        <span class="deal-badge" data-oferta-id="roma" hidden></span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Roma</h3>
+                        <p>Italia</p>
+                        <p class="card-price" data-precio-id="roma"></p>
+                        <a class="card-link" href="detalle.html?destino=roma">Ver destino <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            <p class="center-cta"><a href="destinos.html" class="btn-secondary">VER TODOS LOS DESTINOS <i class="fas fa-arrow-right"></i></a></p>
+        </section>
+
+        <section class="offers-section" id="ofertas" aria-labelledby="titulo-ofertas">
+            <h2 class="section-title" id="titulo-ofertas"><i class="fas fa-tags"></i> OFERTAS DE TEMPORADA<small>Precios por noche con descuento. Reserva con cancelación gratis.</small></h2>
+            <div class="grid-container">
+                <article class="card-destino" data-id="cancun" data-category="playas" data-name="Cancún México">
+                    <div class="card-img">
+                        <img src="assets/img/destinos/cancun.jpg" alt="Cancún, México" loading="lazy">
+                        <span class="card-tag">playas</span>
+                        <span class="deal-badge" data-oferta-id="cancun" hidden></span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Cancún</h3>
+                        <p>México</p>
+                        <p class="card-price" data-precio-id="cancun"></p>
+                        <a class="card-link" href="reservas.html?destino=cancun">Reservar oferta <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="card-destino" data-id="india" data-category="templos" data-name="India (Taj Mahal) India">
+                    <div class="card-img">
+                        <img src="assets/img/destinos/india.jpg" alt="India (Taj Mahal), India" loading="lazy">
+                        <span class="card-tag">templos</span>
+                        <span class="deal-badge" data-oferta-id="india" hidden></span>
+                    </div>
+                    <div class="card-info">
+                        <h3>India (Taj Mahal)</h3>
+                        <p>India</p>
+                        <p class="card-price" data-precio-id="india"></p>
+                        <a class="card-link" href="reservas.html?destino=india">Reservar oferta <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="card-destino" data-id="cartagena" data-category="ciudades" data-name="Cartagena Colombia">
+                    <div class="card-img">
+                        <img src="assets/img/destinos/cartagena.jpg" alt="Cartagena, Colombia" loading="lazy">
+                        <span class="card-tag">ciudades</span>
+                        <span class="deal-badge" data-oferta-id="cartagena" hidden></span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Cartagena</h3>
+                        <p>Colombia</p>
+                        <p class="card-price" data-precio-id="cartagena"></p>
+                        <a class="card-link" href="reservas.html?destino=cartagena">Reservar oferta <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="card-destino" data-id="jinan-park" data-category="montañas" data-name="Jinan Park China">
+                    <div class="card-img">
+                        <img src="assets/img/destinos/jinan-park.jpg" alt="Jinan Park, China" loading="lazy">
+                        <span class="card-tag">montañas</span>
+                        <span class="deal-badge" data-oferta-id="jinan-park" hidden></span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Jinan Park</h3>
+                        <p>China</p>
+                        <p class="card-price" data-precio-id="jinan-park"></p>
+                        <a class="card-link" href="reservas.html?destino=jinan-park">Reservar oferta <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="services-section" id="servicios" aria-labelledby="titulo-servicios">
+            <h2 class="section-title" id="titulo-servicios">NUESTROS SERVICIOS</h2>
+            <div class="grid-servicios">
+                <a class="service-card" href="servicios.html#alojamiento">
+                    <i class="fas fa-bed"></i>
+                    <h3>Alojamiento</h3>
+                    <p>Hoteles y alojamientos cómodos</p>
+                    <span class="more">Ver más <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a class="service-card" href="servicios.html#transporte">
+                    <i class="fas fa-bus"></i>
+                    <h3>Transporte</h3>
+                    <p>Traslados seguros</p>
+                    <span class="more">Ver más <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a class="service-card" href="servicios.html#tours">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Tours y actividades</h3>
+                    <p>Experiencias únicas</p>
+                    <span class="more">Ver más <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a class="service-card" href="servicios.html#asistencia">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Asistencia al viajero</h3>
+                    <p>Viaja con tranquilidad</p>
+                    <span class="more">Ver más <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <h4>DESTINO360</h4>
+                <p>Explora. Viaja. Vive.</p>
+            </div>
+            <div class="footer-info">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="reservas.html">Reservar alojamiento</a></li>
+                    <li><a href="reservas.html#mis-reservas">Mis reservas</a></li>
+                    <li><a href="contacto.html#formulario">Solicitar cotización</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="mailto:info@destino360.com"><i class="fas fa-envelope"></i> info@destino360.com</a></li>
+                    <li><a href="tel:+576012345678"><i class="fas fa-phone"></i> +57 601 234 5678</a></li>
+                    <li><a href="contacto.html#encuentranos"><i class="fas fa-location-dot"></i> Bogotá, Colombia</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/profile.php?id=61596557891798" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Destino360 (abre en una pestaña nueva)"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/websitep634/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Destino360 (abre en una pestaña nueva)"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; <span class="year">2026</span> Destino360. Todos los derechos reservados.</p>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+    <script src="assets/js/destinos.js"></script>
+    <script src="assets/js/reservas.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

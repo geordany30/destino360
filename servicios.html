@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Alojamiento, transporte, tours y asistencia al viajero con Destino360.">
+    <title>Servicios | Destino360</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="Destino360, ir al inicio"><i class="fas fa-earth-americas"></i> DESTINO360</a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><i class="fas fa-bars"></i></button>
+        <nav class="main-nav" id="menu-principal" aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="destinos.html">DESTINOS</a></li>
+                <li><a href="servicios.html" class="active" aria-current="page">SERVICIOS</a></li>
+                <li><a href="detalle.html">DETALLE DEL DESTINO</a></li>
+                <li><a href="reservas.html">RESERVAS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido">
+        <section class="hero hero--center hero-servicios">
+            <div class="hero-content">
+                <p class="eyebrow">TODO LO QUE NECESITAS PARA TU VIAJE</p>
+                <h1>NUESTROS SERVICIOS</h1>
+                <p>Te acompañamos en cada etapa de tu aventura con soluciones completas, seguras y personalizadas.</p>
+            </div>
+        </section>
+
+        <section aria-label="Servicios">
+            <div class="grid-container" style="margin-top: 50px;">
+                <article class="card-destino" id="alojamiento">
+                    <div class="card-img"><img src="assets/img/servicios/alojamiento.jpg" alt="Alojamiento" loading="lazy"></div>
+                    <div class="card-info">
+                        <h3><i class="fas fa-bed"></i> Alojamiento</h3>
+                        <p>Hoteles y alojamientos cómodos en los mejores destinos.</p>
+                        <p class="card-price"><span class="price-from">Desde</span> <strong>$ 175.000 COP</strong> <span class="price-unit">/ noche</span></p>
+                        <div class="service-details" id="detalle-alojamiento">
+                            <ul>
+                                <li>Hoteles de 3 a 5 estrellas</li>
+                                <li>Hostales y apartamentos turísticos</li>
+                                <li>Resorts todo incluido</li>
+                                <li>Cancelación flexible</li>
+                            </ul>
+                            <a class="card-link card-link--blue" href="reservas.html">Reservar alojamiento <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <button type="button" class="toggle-details" aria-expanded="false" aria-controls="detalle-alojamiento"><span class="label">VER MÁS</span> <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </article>
+                <article class="card-destino" id="transporte">
+                    <div class="card-img"><img src="assets/img/servicios/transporte.jpg" alt="Transporte" loading="lazy"></div>
+                    <div class="card-info">
+                        <h3><i class="fas fa-bus"></i> Transporte</h3>
+                        <p>Traslados seguros y cómodos dentro y entre destinos.</p>
+                        <p class="card-price"><span class="price-from">Desde</span> <strong>$ 120.000 COP</strong> <span class="price-unit">/ traslado</span></p>
+                        <div class="service-details" id="detalle-transporte">
+                            <ul>
+                                <li>Traslados aeropuerto - hotel</li>
+                                <li>Tiquetes aéreos nacionales e internacionales</li>
+                                <li>Alquiler de vehículos</li>
+                                <li>Conductores certificados</li>
+                            </ul>
+                            <a class="card-link card-link--blue" href="contacto.html?servicio=transporte#formulario">Cotizar este servicio <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <button type="button" class="toggle-details" aria-expanded="false" aria-controls="detalle-transporte"><span class="label">VER MÁS</span> <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </article>
+                <article class="card-destino" id="tours">
+                    <div class="card-img"><img src="assets/img/servicios/tours-y-actividades.jpg" alt="Tours y actividades" loading="lazy"></div>
+                    <div class="card-info">
+                        <h3><i class="fas fa-map-marked-alt"></i> Tours y actividades</h3>
+                        <p>Experiencias únicas para conocer cada destino.</p>
+                        <p class="card-price"><span class="price-from">Desde</span> <strong>$ 180.000 COP</strong> <span class="price-unit">/ persona</span></p>
+                        <div class="service-details" id="detalle-tours">
+                            <ul>
+                                <li>City tours con guía local</li>
+                                <li>Excursiones en lancha y snorkel</li>
+                                <li>Rutas gastronómicas</li>
+                                <li>Planes de aventura y naturaleza</li>
+                            </ul>
+                            <a class="card-link card-link--blue" href="contacto.html?servicio=tours#formulario">Cotizar este servicio <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <button type="button" class="toggle-details" aria-expanded="false" aria-controls="detalle-tours"><span class="label">VER MÁS</span> <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </article>
+                <article class="card-destino" id="asistencia">
+                    <div class="card-img"><img src="assets/img/servicios/asistencia-al-viajero.jpg" alt="Asistencia al viajero" loading="lazy"></div>
+                    <div class="card-info">
+                        <h3><i class="fas fa-shield-alt"></i> Asistencia al viajero</h3>
+                        <p>Viaja con tranquilidad, nosotros te respaldamos.</p>
+                        <p class="card-price"><span class="price-from">Desde</span> <strong>$ 25.000 COP</strong> <span class="price-unit">/ persona por día</span></p>
+                        <div class="service-details" id="detalle-asistencia">
+                            <ul>
+                                <li>Atención 24/7 en español</li>
+                                <li>Seguro médico de viaje</li>
+                                <li>Apoyo con equipaje perdido</li>
+                                <li>Asesoría en documentos y visas</li>
+                            </ul>
+                            <a class="card-link card-link--blue" href="contacto.html?servicio=asistencia#formulario">Cotizar este servicio <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <button type="button" class="toggle-details" aria-expanded="false" aria-controls="detalle-asistencia"><span class="label">VER MÁS</span> <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="why-us" aria-labelledby="titulo-por-que">
+            <h2 class="section-title section-title--left container" style="padding:0;" id="titulo-por-que">¿POR QUÉ ELEGIRNOS?<small>Tu viaje, nuestra prioridad</small></h2>
+            <div class="why-grid">
+                <div><i class="fas fa-star"></i><h4>Experiencia</h4><p>Años creando viajes inolvidables.</p></div>
+                <div><i class="fas fa-user-check"></i><h4>Atención personalizada</h4><p>Te asesoramos en cada paso.</p></div>
+                <div><i class="fas fa-lock"></i><h4>Seguridad</h4><p>Proveedores confiables y viajes seguros.</p></div>
+                <div><i class="fas fa-globe"></i><h4>Destinos únicos</h4><p>Experiencias auténticas en lugares increíbles.</p></div>
+            </div>
+            <p class="center-cta" style="margin-top:40px;"><a href="contacto.html#formulario" class="btn-secondary">SOLICITAR COTIZACIÓN <i class="fas fa-paper-plane"></i></a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <h4>DESTINO360</h4>
+                <p>Explora. Viaja. Vive.</p>
+            </div>
+            <div class="footer-info">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="reservas.html">Reservar alojamiento</a></li>
+                    <li><a href="reservas.html#mis-reservas">Mis reservas</a></li>
+                    <li><a href="contacto.html#formulario">Solicitar cotización</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="mailto:info@destino360.com"><i class="fas fa-envelope"></i> info@destino360.com</a></li>
+                    <li><a href="tel:+576012345678"><i class="fas fa-phone"></i> +57 601 234 5678</a></li>
+                    <li><a href="contacto.html#encuentranos"><i class="fas fa-location-dot"></i> Bogotá, Colombia</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/profile.php?id=61596557891798" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Destino360 (abre en una pestaña nueva)"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/websitep634/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Destino360 (abre en una pestaña nueva)"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; <span class="year">2026</span> Destino360. Todos los derechos reservados.</p>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+    <script src="assets/js/destinos.js"></script>
+    <script src="assets/js/reservas.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

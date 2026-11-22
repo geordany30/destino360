@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Reserva alojamiento: elige fechas, compara precios y ofertas, y confirma tu reserva.">
+    <title>Reservas | Destino360</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="Destino360, ir al inicio"><i class="fas fa-earth-americas"></i> DESTINO360</a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><i class="fas fa-bars"></i></button>
+        <nav class="main-nav" id="menu-principal" aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="destinos.html">DESTINOS</a></li>
+                <li><a href="servicios.html">SERVICIOS</a></li>
+                <li><a href="detalle.html">DETALLE DEL DESTINO</a></li>
+                <li><a href="reservas.html" class="active" aria-current="page">RESERVAS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido">
+        <section class="hero hero--short hero-reservas">
+            <div class="hero-content">
+                <p class="eyebrow">RESERVA EN LÍNEA</p>
+                <h1>Encuentra tu alojamiento ideal</h1>
+                <p>Elige tus fechas, compara precios y confirma tu reserva en minutos.</p>
+            </div>
+        </section>
+
+        <div class="booking-wrap">
+            <form class="booking-search reservas" action="reservas.html" method="get">
+                <div class="bs-field bs-destino">
+                    <label for="bs-destinoreservas"><i class="fas fa-location-dot"></i> Destino</label>
+                    <select id="bs-destinoreservas" name="destino" required><option value="">¿A dónde vas?</option></select>
+                </div>
+                <div class="bs-field">
+                    <label for="bs-entradareservas"><i class="fas fa-calendar-days"></i> Entrada</label>
+                    <input id="bs-entradareservas" type="date" name="entrada" required>
+                </div>
+                <div class="bs-field">
+                    <label for="bs-salidareservas"><i class="fas fa-calendar-check"></i> Salida <span class="booking-nights"></span></label>
+                    <input id="bs-salidareservas" type="date" name="salida" required>
+                </div>
+                <div class="bs-field bs-small">
+                    <label for="bs-adultosreservas"><i class="fas fa-user"></i> Adultos</label>
+                    <select id="bs-adultosreservas" name="adultos"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
+                </div>
+                <div class="bs-field bs-small">
+                    <label for="bs-ninosreservas"><i class="fas fa-child"></i> Niños</label>
+                    <select id="bs-ninosreservas" name="ninos"><option value="0" selected>0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></select>
+                </div>
+                <div class="bs-field bs-small">
+                    <label for="bs-habreservas"><i class="fas fa-door-open"></i> Habit.</label>
+                    <select id="bs-habreservas" name="habitaciones"><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>
+                </div>
+                <button type="submit" class="btn-primary bs-submit"><i class="fas fa-magnifying-glass"></i> Buscar</button>
+                <p class="booking-error" role="alert" hidden></p>
+            </form>
+        </div>
+
+        <div class="reservas-layout">
+            <section id="resultados" aria-live="polite" aria-label="Resultados de disponibilidad"></section>
+
+            <section id="paso-confirmar" class="paso-confirmar" hidden aria-labelledby="titulo-paso2">
+                <h2 id="titulo-paso2">Completa tu reserva</h2>
+                <div class="paso-grid">
+                    <div>
+                        <h3 class="sub">1. Agrega servicios adicionales</h3>
+                        <div id="lista-extras" class="lista-extras"></div>
+                        <h3 class="sub">2. Datos del titular</h3>
+                        <form id="form-huesped" novalidate>
+                            <div class="form-grid">
+                                <div class="form-field"><label for="h-nombre">Nombre completo *</label><input id="h-nombre" autocomplete="name"><span class="error-msg"></span></div>
+                                <div class="form-field"><label for="h-documento">Documento de identidad *</label><input id="h-documento"><span class="error-msg"></span></div>
+                                <div class="form-field"><label for="h-correo">Correo electrónico *</label><input id="h-correo" type="email" autocomplete="email"><span class="error-msg"></span></div>
+                                <div class="form-field"><label for="h-telefono">Teléfono *</label><input id="h-telefono" type="tel" autocomplete="tel"><span class="error-msg"></span></div>
+                                <div class="form-field form-field--full"><label for="h-peticiones">Peticiones especiales</label><textarea id="h-peticiones" placeholder="Ej.: cama doble, llegada tarde..."></textarea><span class="error-msg"></span></div>
+                            </div>
+                            <label class="check-terms"><input type="checkbox" id="h-terminos"> Acepto las condiciones: cancelación gratis hasta 48 horas antes de la llegada.</label>
+                            <span class="error-msg" id="h-terminos-error"></span>
+                            <div class="form-actions">
+                                <button type="submit" class="btn-secondary">CONFIRMAR RESERVA <i class="fas fa-lock"></i></button>
+                                <button type="button" class="link-btn" id="volver-resultados">Volver a los resultados</button>
+                            </div>
+                        </form>
+                    </div>
+                    <aside class="resumen" id="resumen" aria-label="Resumen de precios"></aside>
+                </div>
+            </section>
+
+            <section id="confirmacion" class="confirmacion" hidden role="status"></section>
+
+            <section id="mis-reservas" aria-labelledby="titulo-mis-reservas">
+                <h2 class="section-title section-title--left" id="titulo-mis-reservas"><i class="fas fa-clipboard-list"></i> MIS RESERVAS<small>Registro de tus reservas con fechas de entrada y salida (se guarda en este navegador).</small></h2>
+                <div id="lista-reservas"></div>
+            </section>
+
+            <section class="info-precios" aria-labelledby="titulo-info">
+                <h2 class="section-title section-title--left" id="titulo-info">¿CÓMO CALCULAMOS EL PRECIO?</h2>
+                <div class="imperdibles">
+                    <div class="imperdible"><i class="fas fa-moon"></i><h3>Precio por noche</h3><p>Cada habitación incluye hasta 2 huéspedes. Cada huésped adicional suma 35 %.</p></div>
+                    <div class="imperdible"><i class="fas fa-calendar-week"></i><h3>Fines de semana</h3><p>Las noches de viernes y sábado tienen un recargo del 15 %.</p></div>
+                    <div class="imperdible"><i class="fas fa-tags"></i><h3>Ofertas</h3><p>El descuento del destino se aplica a todas las noches de la reserva.</p></div>
+                    <div class="imperdible"><i class="fas fa-rotate-left"></i><h3>Cancelación gratis</h3><p>Cancela sin costo hasta 48 horas antes de tu llegada.</p></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <h4>DESTINO360</h4>
+                <p>Explora. Viaja. Vive.</p>
+            </div>
+            <div class="footer-info">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="reservas.html">Reservar alojamiento</a></li>
+                    <li><a href="reservas.html#mis-reservas">Mis reservas</a></li>
+                    <li><a href="contacto.html#formulario">Solicitar cotización</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="mailto:info@destino360.com"><i class="fas fa-envelope"></i> info@destino360.com</a></li>
+                    <li><a href="tel:+576012345678"><i class="fas fa-phone"></i> +57 601 234 5678</a></li>
+                    <li><a href="contacto.html#encuentranos"><i class="fas fa-location-dot"></i> Bogotá, Colombia</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/profile.php?id=61596557891798" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Destino360 (abre en una pestaña nueva)"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/websitep634/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Destino360 (abre en una pestaña nueva)"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; <span class="year">2026</span> Destino360. Todos los derechos reservados.</p>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+    <script src="assets/js/destinos.js"></script>
+    <script src="assets/js/reservas.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
